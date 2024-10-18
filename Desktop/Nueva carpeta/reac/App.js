@@ -1,9 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, SafeAreaView } from 'react-native';
+import HelloWorldScreen from './src/presentacion/screens/HelloWorldScreen';
+import CounterScreen from './src/presentacion/screens/CounterScreen';
 
 const image = require('./assets/icon.png'); // Esta línea está bien si deseas usar una imagen local
 
-export default function App() {
+
+export default function App(){
+  return(
+    <SafeAreaView style={{flex: 1}}>
+      {/*<HelloWorldScreen name =',juan carlos jaimes suarez '></HelloWorldScreen>*/}
+      <CounterScreen></CounterScreen>
+    </SafeAreaView>
+    
+  )
+}
+/*export default function App() {
   return (
     <View style={styles.container}>
       <Image 
@@ -15,6 +27,7 @@ export default function App() {
         }} 
       />
       <Text>hola mundo</Text>
+      
       <StatusBar style="auto" />
     </View>
   );
@@ -28,3 +41,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+*/
